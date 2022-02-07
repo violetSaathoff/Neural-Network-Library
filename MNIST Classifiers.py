@@ -13,6 +13,14 @@ import gzip
 import IDX
 import matplotlib.pyplot as plt
 
+# A Sample Script to Run
+def sample():
+    # Create a Network (2 Hidden Layers with Size 70, the last layer uses a softmax activation function while the other layers use a sigmoid activation function)
+    network = newANN()
+    
+    # Train the Network (5 epochs of MBGD with a batchsize of 100, printing the final accuracy, and graphing the convergence)
+    train(network)
+
 #A Class for Loading/Storing the Data
 class data:
     """A Class for Loading, Storing, and Manipulating the MNIST Data"""
@@ -240,3 +248,7 @@ def train(network, epochs:int = 5, batchsize:int = 100, testPortion:int = 500):
     
     #Plot the Network's Training Curve
     network.plot()
+
+# Run the Sample Code
+if __name__ == '__main__':
+    sample()
