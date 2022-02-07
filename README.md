@@ -9,4 +9,11 @@ To create a new network you first need to create an instance of the Network clas
 
 Here is an example feed-forward network which would be suitable for classifying the MNIST digits:
 
-network = Network(
+#Example MNIST Network
+network = Network('MNIST ANN')
+network += Linear(784, 100, sigmoid)
+network += Linear(100, 100, sigmoid)
+network += Linear(100, 100, sigmoid)
+network += Linear(100, 10, softmax)
+
+This network has an input layer which recieves the flattened MNIST images, two 100-neuron hidden layers, and a 10-neuron output layer. While the activation function used by most of the layers is the sigmoid activation function, the final layer uses a softmax activation function since it is attempting to represent the probability that the input image is of a specific numeral.
