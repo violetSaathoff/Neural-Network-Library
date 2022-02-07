@@ -30,7 +30,7 @@ There are 3 main training algorithms:
 - Mini-Batch Gradient Descent (MBGD), where the data is shuffled, split into batches, and then the weights/biases are updated after each batch is trained on.
 - Stochastic Gradient Descent (SGD), where each training example is chosen at random from the data set, and then the weights/biases are updated. This differes from using MBGD with a batchsize of 1 since the shuffling ensures that all data in MBGD will be trained on once per epoch, while SGD will train on some examples more than once an epoch, and miss other examples entirely.
 
-I recommend MBGD since in practice it has provided faster/more reliable convergance than the other methods.
+I recommend MBGD since in practice it has provided faster/more reliable convergance than the other methods. (FBGD is slow and will converge at whatever the nearest local minima to its starting parameters was, which often doesn't perform very well. SGD is initially fast, but slow to finish converging since it will bounce around the minima it eventually finds without really settling.)
 
 To train the example network from above on the MNIST database using MBGD with a batchise of 32 for 5 training epochs, you would call:
 
