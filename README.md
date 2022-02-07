@@ -17,3 +17,12 @@ Here is an example feed-forward network which would be suitable for classifying 
     network += Linear(100, 10, softmax)
 
 This network has an input layer which recieves the flattened MNIST images, two 100-neuron hidden layers, and a 10-neuron output layer. While the activation function used by most of the layers is the sigmoid activation function, the final layer uses a softmax activation function since it is attempting to represent the probability that the input image is of a specific numeral.
+
+Training networks is done with the Network.train() method, which requires the training data, test data, and a few other parameters. 
+
+There are 3 main training algorithms: 
+- Full-Batch Gradient Descent, where the entire data set is trained on between weights/biases updates.
+- Mini-Batch Gradient Descent, where the data is shuffled, split into batches, and then the weights/biases are updated after each batch is trained on.
+- Stochastic Gradient Descent, where each training example is chosen at random from the data set, and then the weights/biases are updated. This differes from using MBGD with a       batchsize of 1 since the shuffling ensures that all data in MBGD will be trained on once per epoch, while SGD will train on some examples more than once an epoch, and           miss other examples entirely.
+
+I recommend MBGD since in practice it has provided faster/more reliable convergance than the other methods.
