@@ -35,4 +35,4 @@ I recommend MBGD since in practice it has provided faster/more reliable converga
 
 To train the example network from above on the MNIST database using MBGD with a batchise of 32 for 5 training epochs, you would call:
 
-        network.train(training_data, training_labels, test_data, test_labels, 5, 32)
+        network.train(training_data, training_labels, test_data, test_labels, epochs=5, batchsize=32)
