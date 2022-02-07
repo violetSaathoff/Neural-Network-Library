@@ -2,7 +2,7 @@
 
 ## Overview:
 
-I wrote this library so that I could develop a deeper understanding of how Neural Networks work. While it does function, I don't recommend actually using this library since it isn't as well optimized as more professional packages like PyTorch, and TensorFlow, and it also lacks much of the functionality those packages have.
+I wrote this library so that I could develop a deeper understanding of how Neural Networks work. While it does function, I don't recommend actually using this library since it isn't as well optimized as more professional packages like PyTorch, and TensorFlow, and it also lacks much of the functionality those packages have. Furthermore, since I used numpy arrays, it is currently impossible to every use GPU acceleration with this library.
 
 The basic structure of my networks is object-oriented, where the network itself is an object, each layer is an object, and each normalization function is an object. I chose this structure because it felt like the most natural way for me to write this at the time, and it was similar to other ML packages I'd used before.
 
