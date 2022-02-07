@@ -26,9 +26,9 @@ This network has an input layer which recieves the flattened MNIST images, two 1
 Training networks is done with the Network.train() method, which requires the training data, test data, and a few other parameters. 
 
 There are 3 main training algorithms: 
-- Full-Batch Gradient Descent, where the entire data set is trained on between weights/biases updates.
-- Mini-Batch Gradient Descent, where the data is shuffled, split into batches, and then the weights/biases are updated after each batch is trained on.
-- Stochastic Gradient Descent, where each training example is chosen at random from the data set, and then the weights/biases are updated. This differes from using MBGD with a       batchsize of 1 since the shuffling ensures that all data in MBGD will be trained on once per epoch, while SGD will train on some examples more than once an epoch, and           miss other examples entirely.
+- Full-Batch Gradient Descent (FBGD), where the entire data set is trained on between weights/biases updates.
+- Mini-Batch Gradient Descent (MBGD), where the data is shuffled, split into batches, and then the weights/biases are updated after each batch is trained on.
+- Stochastic Gradient Descent (SGD), where each training example is chosen at random from the data set, and then the weights/biases are updated. This differes from using MBGD with a batchsize of 1 since the shuffling ensures that all data in MBGD will be trained on once per epoch, while SGD will train on some examples more than once an epoch, and miss other examples entirely.
 
 I recommend MBGD since in practice it has provided faster/more reliable convergance than the other methods.
 
